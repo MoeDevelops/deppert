@@ -23,11 +23,13 @@
   }
 </script>
 
-<div>
+<div class="flex w-screen flex-col items-center">
+  <h2 class="text-2xl">Front</h2>
   <Card bind:content={front} editable />
+  <h2 class="text-2xl">Back</h2>
   <Card bind:content={back} editable />
   <button
-    class="rounded-2xl border-2 border-green-800 bg-green-600 p-2 text-white"
+    class="w-30 rounded-2xl border-2 border-green-800 bg-green-600 p-2 text-white"
     onclick={doSave}
   >
     Save
