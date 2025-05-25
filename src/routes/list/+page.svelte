@@ -1,18 +1,7 @@
 <script lang="ts">
-  import { browser } from "$app/environment"
-  import type { CardData } from "$lib"
+  import { type CardData, getCards } from "$lib"
 
-  let entries: CardData[] = $state([])
-
-  if (browser) {
-    for (let i = 0; i < localStorage.length; i++) {
-      const key = localStorage.key(i)!
-      const value = localStorage.getItem(key)!
-      entries.push(JSON.parse(value))
-    }
-
-    entries.sort((a, b) => a.createdAt - b.createdAt)
-  }
+  let entries: CardData[] = $state(getCards())
 </script>
 
 <div class="my-4 flex flex-col justify-center">
