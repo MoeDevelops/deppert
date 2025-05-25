@@ -23,7 +23,7 @@
   }
 </script>
 
-<div class="flex w-screen flex-col items-center">
+<div class="my-4 flex w-screen flex-col items-center">
   <h2 class="text-2xl">Front</h2>
   <Card bind:content={front} editable />
   <h2 class="text-2xl">Back</h2>

@@ -1,11 +1,17 @@
 <script lang="ts">
-  import Header from "$lib/components/Header.svelte"
+  import NavBar from "$lib/components/NavBar.svelte"
   import "../app.css"
 
   let { children } = $props()
 </script>
 
-<div class="h-screen dark:bg-gray-900 dark:text-white">
-  <Header />
-  {@render children()}
+<div
+  class="flex h-screen flex-col justify-between dark:bg-gray-900 dark:text-white"
+>
+  <main class="mb-auto">
+    {@render children()}
+  </main>
+  <footer>
+    <NavBar />
+  </footer>
 </div>

@@ -23,7 +23,7 @@
   <div class="flex flex-col items-center">
     <Card front={card.front} back={card.back} flippable></Card>
     <button
-      class="w-30 rounded-2xl border-2 border-red-700 bg-red-500 p-2 text-white"
+      class="my-5 w-30 rounded-2xl border-2 border-red-700 bg-red-500 p-2 text-white"
       onclick={doDelete}
     >
       Delete

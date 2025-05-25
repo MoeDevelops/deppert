@@ -20,9 +20,12 @@
   ]
 </script>
 
-<div>
+<div class="flex justify-around">
   {#each routes as route, i (i)}
-    <a class="mx-2" href={route.route}>
+    <a
+      class="m-4 w-30 rounded-2xl border-2 border-gray-500 bg-gray-300 p-4 text-center hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-black"
+      href={route.route}
+    >
       {route.display}
     </a>
   {/each}
